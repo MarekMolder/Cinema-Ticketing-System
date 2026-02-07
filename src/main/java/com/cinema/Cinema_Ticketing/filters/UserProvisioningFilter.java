@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.filters;
 
-import com.cinema.Cinema_Ticketing.domain.User;
+import com.cinema.Cinema_Ticketing.domain.entities.User;
 import com.cinema.Cinema_Ticketing.repositories.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

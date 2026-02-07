@@ -1,0 +1,20 @@
+package com.cinema.Cinema_Ticketing.domain.dtos.responses;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.UUID;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class CreateCinemaResponseDto {
+    private UUID id;
+    private String name;
+    private List<CreateHallResponseDto> halls;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+}
