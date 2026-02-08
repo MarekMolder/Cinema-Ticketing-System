@@ -1,4 +1,4 @@
-package com.cinema.Cinema_Ticketing.domain;
+package com.cinema.Cinema_Ticketing.domain.createRequests;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

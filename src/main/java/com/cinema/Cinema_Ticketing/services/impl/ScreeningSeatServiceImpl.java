@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.services.impl;
 
-import com.cinema.Cinema_Ticketing.domain.CreateScreeningSeatRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateScreeningSeatRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.Screening;
 import com.cinema.Cinema_Ticketing.domain.entities.ScreeningSeat;
 import com.cinema.Cinema_Ticketing.domain.entities.ScreeningSeatStatusEnum;

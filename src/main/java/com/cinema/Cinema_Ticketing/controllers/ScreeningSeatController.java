@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.controllers;
 
-import com.cinema.Cinema_Ticketing.domain.CreateScreeningSeatRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateScreeningSeatRequest;
 import com.cinema.Cinema_Ticketing.domain.dtos.requests.CreateScreeningSeatRequestDto;
 import com.cinema.Cinema_Ticketing.domain.dtos.responses.CreateScreeningSeatResponseDto;
 import com.cinema.Cinema_Ticketing.domain.entities.ScreeningSeat;

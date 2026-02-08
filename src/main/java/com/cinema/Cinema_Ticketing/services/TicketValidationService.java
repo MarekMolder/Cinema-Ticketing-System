@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.services;
 
-import com.cinema.Cinema_Ticketing.domain.CreateTicketValidationRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateTicketValidationRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.Ticket;
 import com.cinema.Cinema_Ticketing.domain.entities.TicketValidation;
 

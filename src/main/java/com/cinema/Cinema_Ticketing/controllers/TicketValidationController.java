@@ -1,11 +1,12 @@
 package com.cinema.Cinema_Ticketing.controllers;
 
-import com.cinema.Cinema_Ticketing.domain.CreateTicketValidationRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateTicketValidationRequest;
 import com.cinema.Cinema_Ticketing.domain.dtos.requests.CreateTicketValidationRequestDto;
 import com.cinema.Cinema_Ticketing.domain.dtos.responses.CreateTicketValidationResponseDto;
 import com.cinema.Cinema_Ticketing.domain.entities.TicketValidation;
 import com.cinema.Cinema_Ticketing.mappers.TicketValidationMapper;
 import com.cinema.Cinema_Ticketing.services.TicketValidationService;
+import com.cinema.Cinema_Ticketing.util.JwtHelper;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -30,7 +31,7 @@ public class TicketValidationController {
             @AuthenticationPrincipal Jwt jwt,
             @Valid @RequestBody CreateTicketValidationRequestDto createTicketValidationRequestDto) {
 
-        UUID userId = UUID.fromString(jwt.getSubject());
+        UUID userId = JwtHelper.parseUserId(jwt);
 
         CreateTicketValidationRequest createTicketValidationRequest = ticketValidationMapper.fromDto(createTicketValidationRequestDto);
 

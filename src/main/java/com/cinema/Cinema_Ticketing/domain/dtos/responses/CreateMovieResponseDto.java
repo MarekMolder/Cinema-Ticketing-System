@@ -1,7 +1,7 @@
 package com.cinema.Cinema_Ticketing.domain.dtos.responses;
 
-import com.cinema.Cinema_Ticketing.domain.CreateLinkRequest;
-import com.cinema.Cinema_Ticketing.domain.CreateScreeningRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateLinkRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateScreeningRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.MovieTypeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;

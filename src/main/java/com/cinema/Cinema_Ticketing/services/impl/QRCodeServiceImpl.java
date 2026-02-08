@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.services.impl;
 
-import com.cinema.Cinema_Ticketing.domain.CreateQRCodeRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateQRCodeRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.QRCode;
 import com.cinema.Cinema_Ticketing.domain.entities.Ticket;
 import com.cinema.Cinema_Ticketing.exceptions.TicketNotFoundException;

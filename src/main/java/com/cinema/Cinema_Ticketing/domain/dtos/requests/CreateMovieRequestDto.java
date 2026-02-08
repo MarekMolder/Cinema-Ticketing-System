@@ -1,8 +1,6 @@
 package com.cinema.Cinema_Ticketing.domain.dtos.requests;
 
-import com.cinema.Cinema_Ticketing.domain.CreateScreeningRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.MovieTypeEnum;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;

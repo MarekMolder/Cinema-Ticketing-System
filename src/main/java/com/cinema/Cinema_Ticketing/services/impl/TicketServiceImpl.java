@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.services.impl;
 
-import com.cinema.Cinema_Ticketing.domain.CreateTicketRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateTicketRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.*;
 import com.cinema.Cinema_Ticketing.exceptions.*;
 import com.cinema.Cinema_Ticketing.repositories.SeatRepository;

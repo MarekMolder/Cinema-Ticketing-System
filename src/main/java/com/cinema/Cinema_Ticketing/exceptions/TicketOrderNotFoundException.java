@@ -1,9 +1,23 @@
 package com.cinema.Cinema_Ticketing.exceptions;
 
-import java.util.UUID;
-
 public class TicketOrderNotFoundException extends CinemaTicketException {
-    public TicketOrderNotFoundException(UUID ticketOrderId) {
-        super("Ticket order not found with id: " + ticketOrderId);
+
+    public TicketOrderNotFoundException() {
+    }
+
+    public TicketOrderNotFoundException(String message) {
+        super(message);
+    }
+
+    public TicketOrderNotFoundException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public TicketOrderNotFoundException(Throwable cause) {
+        super(cause);
+    }
+
+    public TicketOrderNotFoundException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
     }
 }

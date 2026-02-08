@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.services.impl;
 
-import com.cinema.Cinema_Ticketing.domain.CreateTicketValidationRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateTicketValidationRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.*;
 import com.cinema.Cinema_Ticketing.exceptions.TicketNotFoundException;
 import com.cinema.Cinema_Ticketing.exceptions.UserNotFoundException;

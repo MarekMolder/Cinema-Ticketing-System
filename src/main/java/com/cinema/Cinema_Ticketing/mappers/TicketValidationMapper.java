@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.mappers;
 
-import com.cinema.Cinema_Ticketing.domain.CreateTicketValidationRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateTicketValidationRequest;
 import com.cinema.Cinema_Ticketing.domain.dtos.requests.CreateTicketValidationRequestDto;
 import com.cinema.Cinema_Ticketing.domain.dtos.responses.CreateTicketValidationResponseDto;
 import com.cinema.Cinema_Ticketing.domain.entities.TicketValidation;

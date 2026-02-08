@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.services.impl;
 
-import com.cinema.Cinema_Ticketing.domain.CreateScreeningRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateScreeningRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.Hall;
 import com.cinema.Cinema_Ticketing.domain.entities.Movie;
 import com.cinema.Cinema_Ticketing.domain.entities.Screening;

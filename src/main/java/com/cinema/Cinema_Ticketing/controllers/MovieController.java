@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.controllers;
 
-import com.cinema.Cinema_Ticketing.domain.CreateMovieRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateMovieRequest;
 import com.cinema.Cinema_Ticketing.domain.dtos.requests.CreateMovieRequestDto;
 import com.cinema.Cinema_Ticketing.domain.dtos.responses.CreateMovieResponseDto;
 import com.cinema.Cinema_Ticketing.domain.entities.Movie;
