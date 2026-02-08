@@ -7,11 +7,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateScreeningSeatRequestDto {
+
+    @NotNull(message = "Seat ID is required")
+    private UUID seatId;
 
     @NotNull(message = "Screening seat status is required")
     private ScreeningSeatStatusEnum screeningSeatStatus;

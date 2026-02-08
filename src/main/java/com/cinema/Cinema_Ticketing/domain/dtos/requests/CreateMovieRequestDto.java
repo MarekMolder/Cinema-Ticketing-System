@@ -10,7 +10,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -32,5 +34,7 @@ public class CreateMovieRequestDto {
     @NotEmpty(message = "Movie duration is required")
     private Integer durationMin;
 
-    private List<CreateScreeningRequest> screenings = new ArrayList<>();
+    private List<CreateScreeningRequestDto> screenings = new ArrayList<>();
+
+    private Set<CreateLinkRequestDto> links = new HashSet<>();
 }

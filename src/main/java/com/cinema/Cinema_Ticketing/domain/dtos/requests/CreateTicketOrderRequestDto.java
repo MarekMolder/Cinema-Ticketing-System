@@ -1,9 +1,9 @@
 package com.cinema.Cinema_Ticketing.domain.dtos.requests;
 
-import com.cinema.Cinema_Ticketing.domain.CreateTicketRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.TicketOrderStatusEnum;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,12 +17,13 @@ import java.util.List;
 @NoArgsConstructor
 public class CreateTicketOrderRequestDto {
 
-    @NotEmpty(message = "Ticket order total price is required")
+    @NotNull(message = "Ticket order total price is required")
     private BigDecimal totalPrice;
 
-    @NotEmpty(message = "Ticket order status is required")
+    @NotNull(message = "Ticket order status is required")
     private TicketOrderStatusEnum ticketOrderStatus;
 
-
-    private List<CreateTicketRequest> tickets = new ArrayList<>();
+    @NotEmpty(message = "At least one ticket is required")
+    @Valid
+    private List<CreateTicketRequestDto> tickets = new ArrayList<>();
 }

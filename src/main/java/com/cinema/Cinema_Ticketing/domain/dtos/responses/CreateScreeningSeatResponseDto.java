@@ -1,7 +1,6 @@
 package com.cinema.Cinema_Ticketing.domain.dtos.responses;
 
-import com.cinema.Cinema_Ticketing.domain.entities.MethodEnum;
-import com.cinema.Cinema_Ticketing.domain.entities.ResultEnum;
+import com.cinema.Cinema_Ticketing.domain.entities.ScreeningSeatStatusEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,11 +11,10 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreatedTicketValidationResponseDto {
+public class CreateScreeningSeatResponseDto {
     private UUID id;
-    private LocalDateTime validatedAt;
-    private MethodEnum method;
-    private ResultEnum result;
+    private ScreeningSeatStatusEnum screeningSeatStatus;
+    private LocalDateTime heldUntil;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

@@ -20,8 +20,8 @@ public class CreateScreeningResponseDto {
     private LocalDateTime endAt;
     private ScreeningStatusEnum screeningStatus;
     private UUID movieId;
-    private List<CreatedTicketOrderResponseDto> ticketOrders = new ArrayList<>();
-    private List<CreatedScreeningSeatResponseDto> screeningSeats = new ArrayList<>();
+    private List<CreateTicketOrderResponseDto> ticketOrders = new ArrayList<>();
+    private List<CreateScreeningSeatResponseDto> screeningSeats = new ArrayList<>();
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }
