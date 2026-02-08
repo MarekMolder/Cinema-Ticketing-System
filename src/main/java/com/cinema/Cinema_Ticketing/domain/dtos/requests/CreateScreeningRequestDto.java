@@ -29,4 +29,6 @@ public class CreateScreeningRequestDto {
 
     @NotNull(message = "Movie ID is required")
     private UUID movieId;
+
+    private UUID hallId;  // required when creating screenings from Movie context
 }

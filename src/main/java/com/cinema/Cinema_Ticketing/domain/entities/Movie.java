@@ -37,13 +37,7 @@ public class Movie {
     @Column(name = "duration_min", nullable = false)
     private Integer durationMin;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-            name = "links_in_movies",
-            joinColumns = @JoinColumn(name = "movie_id"),
-            inverseJoinColumns = @JoinColumn(name = "link_id"),
-            uniqueConstraints = @UniqueConstraint(columnNames={"movie_id","link_id"})
-    )
+    @OneToMany(mappedBy = "movie", cascade = CascadeType.PERSIST)
     private Set<Link> links = new HashSet<>();
 
     @OneToMany(mappedBy = "movie")

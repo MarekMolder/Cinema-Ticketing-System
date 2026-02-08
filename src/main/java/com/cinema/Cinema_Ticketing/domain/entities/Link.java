@@ -27,8 +27,9 @@ public class Link {
     @Column(name = "url", nullable = false)
     private String url;
 
-    @ManyToMany(mappedBy = "links", fetch = FetchType.LAZY)
-    private Set<Movie> movies = new HashSet<>();
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "movie_id", nullable = false)
+    private Movie movie;
 
     @CreatedDate
     @Column(name = "created_at", updatable = false, nullable = false)

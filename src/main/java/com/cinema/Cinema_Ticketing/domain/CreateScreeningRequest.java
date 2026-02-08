@@ -17,4 +17,5 @@ public class CreateScreeningRequest {
     private LocalDateTime endAt;
     private ScreeningStatusEnum screeningStatus;
     private UUID movieId;
+    private UUID hallId;  // required when creating screenings from Movie context
 }

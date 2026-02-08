@@ -11,5 +11,4 @@ import lombok.NoArgsConstructor;
 public class CreateQRCodeRequest {
     private String codeValue;
     private CodeStatusEnum codeStatus;
-    private CreateTicketRequest ticket;
 }

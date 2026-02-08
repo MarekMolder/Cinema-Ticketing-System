@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.domain.dtos.responses;
 
-import com.cinema.Cinema_Ticketing.domain.entities.TicketOrderStatusEnum;
+import com.cinema.Cinema_Ticketing.domain.entities.TicketStatusEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,11 +14,12 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreatedTicketOrderResponseDto {
+public class CreateTicketResponseDto {
     private UUID id;
-    private BigDecimal totalPrice;
-    private TicketOrderStatusEnum ticketOrderStatus;
-    private List<CreatedTicketResponseDto> tickets = new ArrayList<>();
+    private BigDecimal price;
+    private TicketStatusEnum ticketStatus;
+    private List<CreateTicketValidationResponseDto> ticketValidations = new ArrayList<>();
+    private CreateQRCodeResponseDto qrCode;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

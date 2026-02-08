@@ -3,8 +3,13 @@ package com.cinema.Cinema_Ticketing.controllers;
 import com.cinema.Cinema_Ticketing.domain.dtos.ErrorDto;
 import com.cinema.Cinema_Ticketing.exceptions.CinemaTicketException;
 import com.cinema.Cinema_Ticketing.exceptions.MovieNotFoundException;
+import com.cinema.Cinema_Ticketing.exceptions.CinemaNotFoundException;
+import com.cinema.Cinema_Ticketing.exceptions.HallNotFoundException;
+import com.cinema.Cinema_Ticketing.exceptions.ScreeningNotFoundException;
+import com.cinema.Cinema_Ticketing.exceptions.SeatNotFoundException;
+import com.cinema.Cinema_Ticketing.exceptions.TicketNotFoundException;
+import com.cinema.Cinema_Ticketing.exceptions.TicketOrderNotFoundException;
 import com.cinema.Cinema_Ticketing.exceptions.UserNotFoundException;
-import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -13,7 +18,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.List;
@@ -30,9 +34,57 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(errorDto, HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler(CinemaNotFoundException.class)
+    public ResponseEntity<ErrorDto> handleCinemaNotFoundException(CinemaNotFoundException ex) {
+        log.error("Caught CinemaNotFoundException", ex);
+        ErrorDto errorDto = new ErrorDto();
+        errorDto.setError(ex.getMessage());
+        return new ResponseEntity<>(errorDto, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(HallNotFoundException.class)
+    public ResponseEntity<ErrorDto> handleHallNotFoundException(HallNotFoundException ex) {
+        log.error("Caught HallNotFoundException", ex);
+        ErrorDto errorDto = new ErrorDto();
+        errorDto.setError(ex.getMessage());
+        return new ResponseEntity<>(errorDto, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(SeatNotFoundException.class)
+    public ResponseEntity<ErrorDto> handleSeatNotFoundException(SeatNotFoundException ex) {
+        log.error("Caught SeatNotFoundException", ex);
+        ErrorDto errorDto = new ErrorDto();
+        errorDto.setError(ex.getMessage());
+        return new ResponseEntity<>(errorDto, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(ScreeningNotFoundException.class)
+    public ResponseEntity<ErrorDto> handleScreeningNotFoundException(ScreeningNotFoundException ex) {
+        log.error("Caught ScreeningNotFoundException", ex);
+        ErrorDto errorDto = new ErrorDto();
+        errorDto.setError(ex.getMessage());
+        return new ResponseEntity<>(errorDto, HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(MovieNotFoundException.class)
     public ResponseEntity<ErrorDto> handleMovieNotFoundException(MovieNotFoundException ex) {
         log.error("Caught MovieNotFoundException", ex);
+        ErrorDto errorDto = new ErrorDto();
+        errorDto.setError(ex.getMessage());
+        return new ResponseEntity<>(errorDto, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(TicketNotFoundException.class)
+    public ResponseEntity<ErrorDto> handleTicketNotFoundException(TicketNotFoundException ex) {
+        log.error("Caught TicketNotFoundException", ex);
+        ErrorDto errorDto = new ErrorDto();
+        errorDto.setError(ex.getMessage());
+        return new ResponseEntity<>(errorDto, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(TicketOrderNotFoundException.class)
+    public ResponseEntity<ErrorDto> handleTicketOrderNotFoundException(TicketOrderNotFoundException ex) {
+        log.error("Caught TicketOrderNotFoundException", ex);
         ErrorDto errorDto = new ErrorDto();
         errorDto.setError(ex.getMessage());
         return new ResponseEntity<>(errorDto, HttpStatus.NOT_FOUND);

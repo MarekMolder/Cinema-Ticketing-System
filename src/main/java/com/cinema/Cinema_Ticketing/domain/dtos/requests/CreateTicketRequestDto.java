@@ -1,32 +1,30 @@
 package com.cinema.Cinema_Ticketing.domain.dtos.requests;
 
-import com.cinema.Cinema_Ticketing.domain.CreateQRCodeRequest;
-import com.cinema.Cinema_Ticketing.domain.CreateTicketValidationRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.TicketStatusEnum;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateTicketRequestDto {
 
-    @NotEmpty(message = "Ticket price is required")
+    @NotNull(message = "Ticket price is required")
     private BigDecimal price;
 
-    @NotEmpty(message = "Ticket status is required")
+    @NotNull(message = "Ticket status is required")
     private TicketStatusEnum ticketStatus;
 
+    @NotNull(message = "Seat ID is required")
+    private UUID seatId;
 
-    private List<CreateTicketValidationRequest> ticketValidations = new ArrayList<>();
-
-
+    @NotNull(message = "QR Code is required")
+    @Valid
     private CreateQRCodeRequestDto qrCode;
 }
