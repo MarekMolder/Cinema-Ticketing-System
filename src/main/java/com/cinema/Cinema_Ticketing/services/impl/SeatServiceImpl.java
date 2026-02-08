@@ -1,10 +1,8 @@
 package com.cinema.Cinema_Ticketing.services.impl;
 
-import com.cinema.Cinema_Ticketing.domain.CreateSeatRequest;
-import com.cinema.Cinema_Ticketing.domain.entities.Cinema;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateSeatRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.Hall;
 import com.cinema.Cinema_Ticketing.domain.entities.Seat;
-import com.cinema.Cinema_Ticketing.exceptions.CinemaNotFoundException;
 import com.cinema.Cinema_Ticketing.exceptions.HallNotFoundException;
 import com.cinema.Cinema_Ticketing.repositories.HallRepository;
 import com.cinema.Cinema_Ticketing.repositories.SeatRepository;

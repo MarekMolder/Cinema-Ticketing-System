@@ -1,4 +1,4 @@
-package com.cinema.Cinema_Ticketing.domain;
+package com.cinema.Cinema_Ticketing.domain.createRequests;
 
 import com.cinema.Cinema_Ticketing.domain.entities.TicketOrderStatusEnum;
 import lombok.AllArgsConstructor;

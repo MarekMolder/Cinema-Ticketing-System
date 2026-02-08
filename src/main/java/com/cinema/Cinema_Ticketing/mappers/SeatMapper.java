@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.mappers;
 
-import com.cinema.Cinema_Ticketing.domain.CreateSeatRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateSeatRequest;
 import com.cinema.Cinema_Ticketing.domain.dtos.requests.CreateSeatRequestDto;
 import com.cinema.Cinema_Ticketing.domain.dtos.responses.CreateSeatResponseDto;
 import com.cinema.Cinema_Ticketing.domain.entities.Seat;

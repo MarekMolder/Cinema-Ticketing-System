@@ -1,12 +1,11 @@
 package com.cinema.Cinema_Ticketing.services.impl;
 
-import com.cinema.Cinema_Ticketing.domain.CreateMovieRequest;
-import com.cinema.Cinema_Ticketing.domain.CreateScreeningRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateMovieRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateScreeningRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.Link;
 import com.cinema.Cinema_Ticketing.domain.entities.Movie;
 import com.cinema.Cinema_Ticketing.domain.entities.Screening;
 import com.cinema.Cinema_Ticketing.exceptions.HallNotFoundException;
-import com.cinema.Cinema_Ticketing.exceptions.MovieNotFoundException;
 import com.cinema.Cinema_Ticketing.repositories.HallRepository;
 import com.cinema.Cinema_Ticketing.repositories.MovieRepository;
 import com.cinema.Cinema_Ticketing.repositories.ScreeningRepository;

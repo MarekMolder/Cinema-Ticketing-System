@@ -1,6 +1,6 @@
 package com.cinema.Cinema_Ticketing.services.impl;
 
-import com.cinema.Cinema_Ticketing.domain.CreateLinkRequest;
+import com.cinema.Cinema_Ticketing.domain.createRequests.CreateLinkRequest;
 import com.cinema.Cinema_Ticketing.domain.entities.Link;
 import com.cinema.Cinema_Ticketing.domain.entities.Movie;
 import com.cinema.Cinema_Ticketing.exceptions.MovieNotFoundException;

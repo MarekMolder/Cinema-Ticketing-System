@@ -3,8 +3,22 @@ package com.cinema.Cinema_Ticketing.exceptions;
 import java.util.UUID;
 
 public class MovieNotFoundException extends CinemaTicketException {
+    public MovieNotFoundException() {
+    }
 
-    public MovieNotFoundException(UUID movieId) {
-        super("Movie not found with id: " + movieId);
+    public MovieNotFoundException(String message) {
+        super(message);
+    }
+
+    public MovieNotFoundException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public MovieNotFoundException(Throwable cause) {
+        super(cause);
+    }
+
+    public MovieNotFoundException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
     }
 }
